@@ -96,6 +96,11 @@ markers (it expects exactly 30 rows); run it with `python scripts/ical.py`
 - `archive/<year>/` — frozen snapshots of past years' `README.md` and `themes.ical`
   (includes `archive/2025/`).
 - `images/` — logos and yearly promotional flyers (referenced via raw GitHub URLs).
+- `data/` — personal map-making data for 2026 (Richmond, VA region). Contents are
+  gitignored; `python scripts/download_data.py` fetches them and `data/README.md`
+  lists sources and the manual (login-only) downloads.
+- `days/NN-theme/` — one working folder per 2026 challenge day; each README lists the
+  `data/` files that day uses. Outside `docs/`, so not part of the site build.
 
 ## Key conventions
 
