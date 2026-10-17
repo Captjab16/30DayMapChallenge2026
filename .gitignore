@@ -73,3 +73,16 @@ yarn-error.log*
 # Backup files
 *.bak
 *.backup 
+# Map challenge data: downloaded by scripts/download_data.py, too large for git
+data/**
+!data/README.md
+!data/*/
+!data/*/.gitkeep
+
+# Map challenge working files
+days/**/*.gdb/
+days/**/.backups/
+days/**/*.lock
+days/**/*.gpkg
+days/**/*.tif
+days/**/*.zip
