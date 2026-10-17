@@ -215,8 +215,11 @@ def to_geopackage(parquet):
         frame = gpd.read_parquet(parquet)
         if "names" in frame:
             frame.insert(1, "name", frame["names"].map(lambda v: v.get("primary") if v else None))
-        if "categories" in frame:
-            frame.insert(2, "category", frame["categories"].map(lambda v: v.get("primary") if v else None))
+        # Overture renamed `categories` to `taxonomy` in 2026; support either
+        for nested in ("taxonomy", "categories"):
+            if nested in frame:
+                frame.insert(2, "category", frame[nested].map(lambda v: v.get("primary") if v else None))
+                break
         for column in frame.columns:
             if column != "geometry" and frame[column].dtype == object:
                 frame[column] = frame[column].map(_flatten)
