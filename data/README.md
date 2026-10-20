@@ -49,3 +49,42 @@ These need a login or an interactive portal, so the script only prints the links
 
 Put manual downloads in the matching folder (for example `imagery/` or `city/`); anything
 under `data/` stays out of git.
+
+## Terms and credits
+
+### VBMP orthoimagery (VGIN)
+
+Captured 19 October 2026 from the
+[VBMP Most Recent Imagery and DEM Download](https://experience.arcgis.com/experience/3876523cde9a434197579e995a92d94c)
+app (the "I agree to the above terms and conditions" box) and the
+[imagery service's metadata](https://vginmaps.vdem.virginia.gov/arcgis/rest/services/VBMP_Imagery/MostRecentImagery_WGS/MapServer).
+
+**What you agree to**
+
+- The data is free and public. VGIN says all program data is "publicly available without
+  charge."
+- No accuracy guarantee: "all warranties regarding the accuracy of the map data and any
+  representation or inferences derived there from are hereby expressly disclaimed."
+- General information only (Code of Virginia § 54.1-402 C): don't use it to decide property
+  lines or boundaries, flood plains, or to design or build improvements to real property.
+- MrSID (`.sid`) files are meant for viewing and are "less ideal for analysis." The DEMs
+  (`.img`) were made to produce the imagery and "may not be appropriate for all analysis
+  tasks."
+
+**Fine for this challenge:** making and sharing maps, using it as a basemap, and tracing or
+interpreting what you see. **Don't:** present a map as showing exact property lines or flood
+risk.
+
+**How to credit it** (the service lists its copyright as "Virginia Geographic Information
+Network (VGIN)"):
+
+> Imagery: Virginia Base Mapping Program (VBMP), Virginia Geographic Information Network
+> (VGIN), Virginia Department of Emergency Management, YEAR
+
+Replace `YEAR` with the flight year in the tile name, for example `N16_6955_10.2025` is
+2025. Richmond's most recent imagery is from 2022, 2023 or 2025.
+
+**Not found:** the app's "GIS data usage" link
+(<https://vgin.vdem.virginia.gov/pages/cl-vgin-data-usage>) asked for a sign-in and showed
+nothing, and no formal license (such as Creative Commons) was found. If you plan to sell anything
+made from the imagery, ask <vbmp@vdem.virginia.gov> first.
